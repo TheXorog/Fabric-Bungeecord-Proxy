@@ -9,13 +9,16 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(UserCache.class)
 public class UserCacheMixin {
-    @Shadow private static boolean useRemote;
+    @Shadow private boolean offlineMode;
 
-    @Redirect(method = "getOfflinePlayerProfile", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/UserCache;shouldUseRemote()Z"))
-    private static boolean findProfileByName() {
-        if (FabricProxy.config.getBungeeCord()) {
+    @Redirect(method = "getOfflinePlayerProfile",
+            at = @At(value = "FIELD", target = "Lnet/minecraft/util/UserCache;offlineMode:Z"))
+    private boolean overrideOfflineMode(UserCache instance) {
+        if (FabricProxy.config.getBungeeCord())
+        {
             return true;
         }
-        return useRemote;
+
+        return offlineMode;
     }
 }

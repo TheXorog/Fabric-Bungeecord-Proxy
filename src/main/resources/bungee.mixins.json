@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "cn.starlight.fabricproxy.mixin.bungee",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "plugin": "cn.starlight.fabricproxy.FabricProxy",
   "mixins": [
     "ClientConnectionMixin",
