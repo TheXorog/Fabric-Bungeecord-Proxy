@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.fortunevale.fabricBungeecordProxyContinued.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "server": [
+    "ClientConnectionAccessor",
+    "bungee.ClientConnectionMixin",
+    "bungee.ClientIntentionPacketMixin",
+    "bungee.ServerHandshakePacketListenerImplMixin",
+    "bungee.ServerLoginNetworkHandlerMixin",
+    "CachedUserNameToIdResolverMixin",
+    "OldUsersConverterMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

@@ -1,12 +1,12 @@
-package cn.starlight.fabricproxy.mixin;
+package org.fortunevale.fabricBungeecordProxyContinued.mixin;
 
-import net.minecraft.network.ClientConnection;
+import net.minecraft.network.Connection;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
 import java.net.SocketAddress;
 
-@Mixin(ClientConnection.class)
+@Mixin(Connection.class)
 public interface ClientConnectionAccessor {
     @Accessor
     void setAddress(SocketAddress address);

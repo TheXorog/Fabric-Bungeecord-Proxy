@@ -1,6 +1,5 @@
-package cn.starlight.fabricproxy;
+package org.fortunevale.fabricBungeecordProxyContinued;
 
-@SuppressWarnings({"FieldCanBeLocal", "FieldMayBeFinal"})
 public class ModConfig {
     private Boolean BungeeCord = false;
     private Boolean alwaysOfficialUUID = false;
@@ -22,7 +21,7 @@ public class ModConfig {
         if(env == null){
             return alwaysOfficialUUID;
         } else {
-          return env.equalsIgnoreCase("true");
+            return env.equalsIgnoreCase("true");
         }
     }
 

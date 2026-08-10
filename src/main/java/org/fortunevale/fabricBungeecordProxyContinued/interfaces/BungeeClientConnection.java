@@ -1,4 +1,4 @@
-package cn.starlight.fabricproxy.interfaces;
+package org.fortunevale.fabricBungeecordProxyContinued.interfaces;
 
 import com.mojang.authlib.properties.Property;
 
